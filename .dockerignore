@@ -1,0 +1,16 @@
+# Backend
+backend/target/
+backend/.gradle/
+backend/build/
+backend/bin/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Git
+.git/
+
+# IDE
+.idea/
+*.iml

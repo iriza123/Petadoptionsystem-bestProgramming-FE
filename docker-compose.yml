@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  # Spring Boot Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: pet-adoption-backend
+    ports:
+      - "8082:8082"
+    networks:
+      - pet-adoption-network
+    restart: unless-stopped
+
+  # React Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: pet-adoption-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - pet-adoption-network
+    restart: unless-stopped
+
+networks:
+  pet-adoption-network:
+    driver: bridge

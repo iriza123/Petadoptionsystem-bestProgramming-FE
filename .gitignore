@@ -1,0 +1,38 @@
+# Backend (Spring Boot / Gradle)
+backend/.gradle/
+backend/build/
+backend/out/
+backend/bin/
+backend/*.log
+backend/.settings/
+backend/.project
+backend/.classpath
+
+# Frontend (React / Node)
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+frontend/*.log
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
