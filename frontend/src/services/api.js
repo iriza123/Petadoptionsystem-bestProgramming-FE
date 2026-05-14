@@ -26,6 +26,12 @@ const api = {
     return response.json()
   },
 
+  // Get ALL pets including PENDING and ADOPTED (for admin)
+  getAllPetsAdmin: async () => {
+    const response = await fetch(`${API_BASE_URL}/pets/filter`)
+    return response.json()
+  },
+
   getPetById: async (id) => {
     const response = await fetch(`${API_BASE_URL}/pets/${id}`)
     return response.json()
