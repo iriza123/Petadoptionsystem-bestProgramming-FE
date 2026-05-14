@@ -272,7 +272,54 @@ BUILD SUCCESS
 
 ---
 
-## 12. Test Summary
+## 12. Tools and Methods for Tracking Issues
+
+### Issue Tracking Tool — GitHub Issues
+
+GitHub Issues is used as the issue tracking tool for the Dog Haus Pet Adoption System. It is built into the GitHub repository and allows the developer to log, track, and resolve bugs and test failures in one place.
+
+**How issues are tracked:**
+
+| Step | Action |
+|------|--------|
+| 1 | Run `mvn test` — any failing test is identified by JUnit output |
+| 2 | Open a new GitHub Issue with the test ID (e.g., AS-04), description of failure, and steps to reproduce |
+| 3 | Label the issue: `bug`, `test-failure`, or `enhancement` |
+| 4 | Fix the code and reference the issue in the commit message (e.g., `fix: resolve AS-04 approve request test`) |
+| 5 | Close the issue when the test passes |
+
+**Issue Labels Used:**
+
+| Label | Meaning |
+|-------|---------|
+| `bug` | A feature is not working as expected |
+| `test-failure` | A unit test is failing |
+| `enhancement` | A feature needs improvement |
+| `wontfix` | Known limitation, out of scope for this prototype |
+
+**Example Issue Format:**
+```
+Title: AS-04 - approveRequest does not update pet status to ADOPTED
+Label: bug, test-failure
+Description:
+  When approveRequest() is called, the pet status is not being
+  updated to ADOPTED. The notification is sent but petService
+  updatePetStatus() is not being called.
+Steps to reproduce:
+  1. Run AdoptionServiceTest
+  2. Test AS-04 fails
+Expected: Pet status = ADOPTED
+Actual: Pet status = PENDING
+Fix: Verify mock setup for petService.updatePetStatus()
+```
+
+### Manual Testing Tracking — Postman
+
+All manual API tests are organized in a Postman Collection named **"Dog Haus API Tests"**. Each request is saved with its expected response for quick re-testing.
+
+---
+
+## 13. Test Summary
 
 | Category | Count |
 |----------|-------|

@@ -89,21 +89,49 @@ cd frontend && npm run build
 
 ## Testing
 
-**34 Unit Tests:** Service, Controller, Repository layers
-Run tests: `cd backend && mvn test`
+**42 Unit Tests:** Covering all 4 service classes (UserService, PetService, AdoptionService, NotificationService)
 
-## Exam Requirements
+```bash
+cd backend
+mvn test
+```
 
-✅ Real-life problem solution
-✅ Clean code (Google standards)
-✅ Version control (Git/GitHub)
-✅ Design patterns (MVC + Repository)
-✅ Dockerization
-✅ Testing (34 unit tests)
-✅ 3 UML diagrams (Use Case, Sequence, Data Flow)
+Expected output:
+```
+Tests run: 42, Failures: 0, Errors: 0, Skipped: 0
+BUILD SUCCESS
+```
+
+Full test plan: `SOFTWARE_TEST_PLAN.md`
+
+## Design Patterns
+
+Three patterns applied — see `DESIGN_PATTERNS.md` for full documentation:
+- **MVC Pattern** — separates Model, View, Controller layers
+- **Repository Pattern** — separates data access from business logic
+- **Service Layer Pattern** — isolates all business rules in service classes
+
+## Project Requirements
+
+✅ Topic and case study — Dog Haus, Kimironko, Kigali, Rwanda
+✅ Functional Diagram — internal working of Dog Haus
+✅ Problem statement — 8 problems identified
+✅ Use Case Diagram — diagrams/use-case-pet-adoption-system.png
+✅ Class Diagram — diagrams/class-diagram.png
+✅ Activity Diagram — diagrams/Activity diagram.png
+✅ Sequence Diagram — diagrams/sequence-diagram...png
+✅ Component Diagram — diagrams/component diagram.jpg
+✅ Software prototype — full-stack React + Spring Boot
+✅ Google coding standards — Java Style Guide + JS Style Guide
+✅ Design patterns — MVC + Repository + Service Layer
+✅ Dockerization — multi-stage Dockerfiles + docker-compose
+✅ Version control — Git initialized, committed to GitHub
+✅ Software test plan — SOFTWARE_TEST_PLAN.md
+✅ Unit tests — 42 tests with JUnit 5 + Mockito
 
 ---
 
 **Author:** Nella
-**Course:** Software Engineering
-**Date:** December 2025
+**Case Study:** Dog Haus — KG 4 St, Kimironko, Kigali, Rwanda
+**Course:** Best Programming Practices and Design Patterns
+**Academic Year:** 2025/2026
