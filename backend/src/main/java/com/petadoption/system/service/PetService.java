@@ -75,7 +75,11 @@ public class PetService {
         pet.setHealthStatus(updatedPet.getHealthStatus());
         pet.setDescription(updatedPet.getDescription());
         pet.setImageUrl(updatedPet.getImageUrl());
-        pet.setStatus(updatedPet.getStatus());
+
+        // Keep existing status if update sends null — prevents NULL constraint error
+        if (updatedPet.getStatus() != null) {
+            pet.setStatus(updatedPet.getStatus());
+        }
 
         return petRepository.save(pet);
     }

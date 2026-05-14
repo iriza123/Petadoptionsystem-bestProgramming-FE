@@ -62,7 +62,8 @@ function ManagePets() {
     gender: 'MALE',
     healthStatus: 'Healthy',
     description: '',
-    imageUrl: ''
+    imageUrl: '',
+    status: 'AVAILABLE'
   })
 
   useEffect(() => {
@@ -140,7 +141,8 @@ function ManagePets() {
       gender: pet.gender,
       healthStatus: pet.healthStatus || 'Healthy',
       description: pet.description || '',
-      imageUrl: pet.imageUrl || ''
+      imageUrl: pet.imageUrl || '',
+      status: pet.status || 'AVAILABLE'
     })
     setShowAddForm(true)
   }
@@ -170,7 +172,8 @@ function ManagePets() {
       gender: 'MALE',
       healthStatus: 'Healthy',
       description: '',
-      imageUrl: ''
+      imageUrl: '',
+      status: 'AVAILABLE'
     })
     setEditingPet(null)
     setShowAddForm(false)
